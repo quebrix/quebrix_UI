@@ -1,0 +1,107 @@
+@page "/Clusters"
+@using quebrix_ui.Components.Layout
+@using quebrix_ui.DTOs
+@layout MainLayout
+
+@* modal *@
+<Modal @ref="modal" title="Create new cluster" IsVerticallyCentered="true">
+    <BodyTemplate>
+        <EditForm FormName=@(nameof(ClusterDto)) Model="@ClusterDto" OnValidSubmit="async ()=> await HandleSetCluster()">
+            <div class="mb-1">
+                <span class="text-danger">* </span><label>Cluster name</label>
+            </div>
+            <div class="form-group">
+                <InputText id="username" @bind-Value="ClusterDto.ClusterName"
+                           class="form-control"/>
+            </div>
+            <hr/>
+            <div class="row" style="direction: rtl">
+                <div class="col-2">
+                    <button type="submit" class="btn btn-success rounded-3">Save</button>
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-danger rounded-3" @onclick="OnHideModalClick">Close</button>
+                </div>
+            </div>
+        </EditForm>
+    </BodyTemplate>
+</Modal>
+
+<Toasts class="p-3" Messages="messages" Placement="ToastsPlacement.TopRight"/>
+<ConfirmDialog @ref="dialog"/>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+            <div class="d-flex align-items-center justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                     class="bi bi-layers me-3" viewBox="0 0 16 16">
+                    <path
+                        d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882zm3.515 7.008L14.438 10 8 13.433 1.562 10 4.25 8.567l3.515 1.874a.5.5 0 0 0 .47 0zM8 9.433 1.562 6 8 2.567 14.438 6z"/>
+                </svg>
+                <h1 class="page-title mb-0">Clusters</h1>
+            </div>
+            <p class="page-description mt-3">Easily manage your cache clusters below.</p>
+        </div>
+    </div>
+
+
+    @if (_clusters.Count > 0 && _clusters.First() != "No clusters found on this port")
+    {
+        <div class="row text-white">
+
+            <div class="col-1">
+                <button class="btn btn-success rounded-3" @onclick="OnShowModalClick" style="width: 110px">
+                    New cluster
+                </button>
+            </div>
+            <div class="col-1">
+                <button class="btn btn-secondary rounded-3" @onclick="RefreshClusters" style="width: 110px;margin-left: 15px">
+                    Refresh
+                </button>
+            </div>
+        </div>
+        
+    }
+   
+
+    <hr class="pt-1 pb-1"/>
+
+    <div class="row mt-4">
+        @if (_clusters.Count == 0)
+        {
+            <div class="col-12 text-center mt-5">
+                <Spinner Size="SpinnerSize.ExtraLarge" Type="SpinnerType.Dots" Color="SpinnerColor.Info"></Spinner>
+                <p class="mt-3 text-muted">Loading clusters, please wait...</p>
+            </div>
+        }
+        else
+        {
+            @foreach (var cluster in _clusters)
+            {
+                if (cluster == "No clusters found on this port")
+                {
+                    <Callout Color="CalloutColor.Warning">
+                        <strong>@cluster</strong>. no cluster set on this server of quebrix.
+                    </Callout>
+                    <div class="col-12 text-center">
+                        <button class="cluster-btn" @onclick="OnShowModalClick">create new cluster</button>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-3">
+                        <div class="clusterCard">
+                            <h4 class="cluster-name">@cluster</h4>
+                            <button class="cluster-btn">View Details</button>
+                            <button class="btn btn-danger rounded-3 mt-2"
+                                    @onclick="async ()=>await ClearClusterAsync(cluster)">Delete
+                            </button>
+                        </div>
+                    </div>
+                }
+            }
+        }
+    </div>
+
+</div>

@@ -1,0 +1,33 @@
+@inherits LayoutComponentBase
+
+
+<Toasts class="p-3" Messages="messages" Placement="ToastsPlacement.TopRight" />
+<div class="login-container">
+    <div class="login-image">
+    </div>
+    <div class="login-form">
+        <img src="Images/android-chrome-512x512.png" class="logo" alt="logo" />
+        <h2>QEUBRIX</h2>
+        <EditForm FormName=@(nameof(LoginModel)) Model="@LoginModel" OnValidSubmit="HandleLogin">
+            <DataAnnotationsValidator />
+
+            <div class="form-group">
+                <InputText id="username" @bind-Value="LoginModel.UserName" placeholder="Enter your username"
+                           class="form-control" />
+                <ValidationMessage For="@(() => LoginModel.UserName)" />
+            </div>
+
+            <div class="form-group password-wrapper">
+                <InputText id="password" @bind-Value="LoginModel.Password" placeholder="Enter your password"
+                           type="@passwordInputType" class="form-control" />
+                <button type="button" class="toggle-password" @onclick="TogglePasswordVisibility">
+                    <i class="@passwordIconClass"></i>
+                </button>
+                <ValidationMessage For="@(() => LoginModel.Password)" />
+            </div>
+
+            <button type="submit" class="submit-btn">Login</button>
+
+        </EditForm>
+    </div>
+</div>

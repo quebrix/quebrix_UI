@@ -93,7 +93,7 @@
                     <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-3">
                         <div class="clusterCard">
                             <h4 class="cluster-name">@cluster</h4>
-                            <button class="cluster-btn">View Details</button>
+                            <button class="cluster-btn" @onclick="async ()=>await NavigateToKeys(cluster)" >View Details</button>
                             <button class="btn btn-danger rounded-3 mt-2"
                                     @onclick="async ()=>await ClearClusterAsync(cluster)">Delete
                             </button>

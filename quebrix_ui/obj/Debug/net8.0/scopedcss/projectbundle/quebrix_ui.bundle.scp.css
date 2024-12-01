@@ -452,4 +452,86 @@ body[b-1og44tenzg] {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4), -5px -5px 20px rgba(255, 255, 255, 0.5);
     transform: translateY(-3px);
 }
+/* _content/quebrix_ui/Components/Pages/Keys.razor.rz.scp.css */
+.key-viewer[b-c5fag8dmxp] {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar[b-c5fag8dmxp] {
+    width: 300px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.sidebar-header[b-c5fag8dmxp] {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar-header h4[b-c5fag8dmxp] {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.search-box[b-c5fag8dmxp] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.key-list[b-c5fag8dmxp] {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.key-item[b-c5fag8dmxp] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.key-item:hover[b-c5fag8dmxp] {
+    background-color: #f0f0f0;
+}
+
+.content[b-c5fag8dmxp] {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.selected-key[b-c5fag8dmxp] {
+    color: #007bff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.json-content[b-c5fag8dmxp] {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+}
+
+.placeholder[b-c5fag8dmxp] {
+    color: #888;
+    text-align: center;
+    font-size: 16px;
+}
 /* _content/quebrix_ui/Components/Pages/Quebrix.razor.rz.scp.css */

@@ -90,6 +90,24 @@ public class ApiClient
     }
     
     
+    public async Task<List<string>> GetKeysOfCluster(string clusterName, string credentials)
+    {
+        var url = $"/api/get_keys/{clusterName.EncodeUrl()}";
+        var request = new RestRequest(url, Method.Get);
+        request.AddHeader("Authorization", $"{credentials}");
+        var response = await _client.ExecuteAsync(request);
+
+        if (response.IsSuccessful)
+        {
+            var apiResponse = JsonConvert.DeserializeObject<ApiResponse<List<string>>>(response.Content);
+            return apiResponse.Data;
+        }
+        else
+        {
+            throw new Exception($"Error getting keys of  cluster: {response.ErrorMessage}");
+        }
+    }
+    
     public async Task<bool> SetCluster(string cluster, string credentials)
     {
         var url = $"/api/set_cluster/{cluster.EncodeUrl()}";
@@ -102,7 +120,46 @@ public class ApiClient
         else
             return false;
     }
-    
+
+
+    public async Task<string> Get(string cluster, string key, string credentials)
+    {
+        try
+        {
+            var url = $"/api/get/{cluster.EncodeUrl()}/{key.EncodeUrl()}";
+            var request = new RestRequest(url, Method.Get);
+            request.AddHeader("Authorization", $"{credentials}");
+            var response = await _client.ExecuteAsync(request);
+
+            if (response.IsSuccessful)
+            {
+                var apiResponse = JsonConvert.DeserializeObject<ApiResponse<ValueResult>>(response.Content);
+                if (apiResponse.IsSuccess)
+                {
+                    var result = string.Empty;
+                    if (apiResponse.Data.ValueType == "Int")
+                        result = BitConverter.ToInt32(apiResponse.Data.Value).ToString();
+                    else
+                    {
+                        result = Encoding.UTF8.GetString(apiResponse.Data.Value);
+                    }
+
+                    return result;
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+
+            return response.ErrorMessage;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception($"Error getting value: {ex.Message}");
+        }
+    }
+
     //helpers
     internal string MakeAuth(string username, string password) => Convert.ToBase64String(Encoding.UTF8.GetBytes($"{username}:{password}"));
 }

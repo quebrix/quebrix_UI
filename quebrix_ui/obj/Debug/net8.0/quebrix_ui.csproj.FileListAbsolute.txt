@@ -45,3 +45,5 @@ D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\bin\Debug\net8.0\Microsoft.Extension
 D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\bin\Debug\net8.0\Microsoft.JSInterop.dll
 D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\scopedcss\Components\Pages\Quebrix.razor.rz.scp.css
 D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\scopedcss\Components\Pages\Clusters.razor.rz.scp.css
+D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\quebrix_ui.sourcelink.json
+D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\scopedcss\Components\Pages\Keys.razor.rz.scp.css

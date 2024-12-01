@@ -10,6 +10,7 @@ namespace quebrix_ui.Components.Pages;
 public partial class Clusters : ComponentBase
 {
     [Inject] private IStorageManagment _StorageManagment { get; set; }
+    [Inject] private NavigationManager _navigator { get; set; }
     List<ToastMessage> messages = new List<ToastMessage>();
     private ConfirmDialog dialog = default!;
     private ClusterDTO ClusterDto { get; set; } = new();
@@ -105,4 +106,11 @@ public partial class Clusters : ComponentBase
         var auth = await _StorageManagment.GetAsync<string>("auth");
         _clusters = await Client.GetAllClusters(auth);
     }
+
+    private async Task NavigateToKeys(string cluster)
+    {
+        _navigator.NavigateTo($"/Keys/{cluster}");
+    }
+    
+    
 }

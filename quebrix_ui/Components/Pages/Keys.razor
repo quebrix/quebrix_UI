@@ -3,28 +3,83 @@
 @using System.Text.Json
 @using quebrix_ui.Components.Layout
 
+@* modal *@
+<Modal @ref="modal" title="Create key value" IsVerticallyCentered="true">
+    <BodyTemplate>
+        <EditForm FormName=@(nameof(KeyValueSetter)) Model="@KeyValueSetter">
+            <div class="mb-1">
+                <span class="text-danger">* </span><label>key</label>
+            </div>
+            <div class="form-group mb-1">
+                <InputText id="key" @bind-Value="KeyValueSetter.Key"
+                           class="form-control"/>
+            </div>
+
+            <div class="mb-1">
+                <span class="text-danger">* </span><label>value</label>
+            </div>
+            <div class="form-group mb-4">
+                <InputTextArea id="value" @bind-Value="KeyValueSetter.Value"
+                               class="form-control"/>
+            </div>
+
+
+            <div class="d-flex align-items-center">
+                <span class="text-danger me-2">*</span>
+                <label class="me-3">TTL</label>
+                <div class="form-group mb-3 d-flex align-items-center">
+                    <Switch Class="mt-3 me-3" Value="Hasttl" ValueExpression="() => Hasttl" ValueChanged="SwitchHasttlChanged" />
+                    <InputText disabled="@(!Hasttl)" @bind-Value="KeyValueSetter.Value" class="form-control" />
+                </div>
+            </div>
+               
+
+            <hr/>
+            <div class="row" style="direction: rtl">
+                <div class="col-2">
+                    <button type="submit" class="btn btn-success rounded-3">Save</button>
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-danger rounded-3" @onclick="OnHideModalClick">Close</button>
+                </div>
+            </div>
+        </EditForm>
+    </BodyTemplate>
+</Modal>
+
+
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
-        <div class="col-md-3 sidebar bg-light border-end">
+        <div class="col-md-3 sidebar border-end">
             <div class="sidebar-header p-3">
                 <h4>@ClusterName Keys</h4>
-                <input type="text" @bind:event="oninput" class="form-control" @bind="FilterText" placeholder="Search keys..." />
+                <input type="text" @bind:event="oninput" class="form-control" @bind="FilterText"
+                       placeholder="Search keys..."/>
             </div>
             <div class="d-flex justify-content-start p-3">
-                <button class="btn btn-outline-secondary me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Refresh">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                        <path d="M11.742 4.29a1 1 0 1 0-1.484 1.32 4 4 0 1 0 1.48 6.55c.35-.42.804-.75 1.315-.94a5.5 5.5 0 1 1-6.553-7.586 1 1 0 1 0-1.633-1.163A7.5 7.5 0 1 0 12.057 5.608c-.51-.19-.965-.51-1.315-.944z"/>
+                <Button Loading="@(IsLoading ? true : false)" LoadingText="Refreshing"
+                        class="btn btn-outline-secondary me-2" @onclick="async ()=>await RefreshKeysAsync()"
+                        data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Refresh">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 4.29a1 1 0 1 0-1.484 1.32 4 4 0 1 0 1.48 6.55c.35-.42.804-.75 1.315-.94a5.5 5.5 0 1 1-6.553-7.586 1 1 0 1 0-1.633-1.163A7.5 7.5 0 1 0 12.057 5.608c-.51-.19-.965-.51-1.315-.944z"/>
                     </svg>
-                </button>
-                <button class="btn btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" title="New Key">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                        <path d="M8 0a.5.5 0 0 1 .5.5v7.5h7a.5.5 0 0 1 0 1h-7.5v7a.5.5 0 0 1-1 0v-7.5H.5a.5.5 0 0 1 0-1h7.5V.5A.5.5 0 0 1 8 0z"/>
+                </Button>
+                <button class="btn btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top"
+                        @onclick="OnShowModalClick"
+                        title="New Key">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a.5.5 0 0 1 .5.5v7.5h7a.5.5 0 0 1 0 1h-7.5v7a.5.5 0 0 1-1 0v-7.5H.5a.5.5 0 0 1 0-1h7.5V.5A.5.5 0 0 1 8 0z"/>
                     </svg>
                 </button>
             </div>
 
-            <ul class="list-group list-group-flush">
+            <ul class="list-group custom-scroll">
                 @if (Keyss.Count == 0)
                 {
                     <Spinner Color="SpinnerColor.Info" Size="SpinnerSize.Medium" Type="SpinnerType.Dots"></Spinner>
@@ -33,7 +88,8 @@
                 {
                     @foreach (var key in FilteredKeys)
                     {
-                        <li class="list-group-item list-group-item-action" @onclick="( async () => await LoadContent(key))">
+                        <li class="key list-group-item list-group-item-action"
+                            @onclick="( async () => await LoadContent(key))">
                             @key
                         </li>
                     }
@@ -56,34 +112,52 @@
                             }
                         </div>
 
-                        <textarea id="jsonContentEditable" class="form-control json-textarea" style="height: 500px" rows="10" @bind="EditableJson"></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">
-                            <button class="btn btn-warning" style="width: 60px" @onclick="SaveContent">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                    <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z"/>
-                                </svg>
-                            </button>
-                        </div>
+                        @if (string.IsNullOrEmpty(EditableJson))
+                        {
+                            <Spinner Color="SpinnerColor.Info" Size="SpinnerSize.Medium"
+                                     Type="SpinnerType.Grow"></Spinner>
+                        }
+                        else
+                        {
+                            <textarea id="jsonContentEditable" class="form-control json-textarea"
+                                      style="height: 500px;border: solid #ccc " rows="10"
+                                      @bind="EditableJson"></textarea>
+                            <div class="row pt-1">
+                                <div class="col-1">
+                                    <button class="btn btn-warning" style="width: 60px" @onclick="SaveContent">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z"/>
+                                        </svg>
+                                    </button>
+                                </div>
 
-                        <div class="col-1">
-                            <button class="btn btn-danger" style="width: 60px" @onclick="SaveContent">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
-                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <div class="col-1">
-                            <button class="btn btn-primary me-2" style="width: 60px" @onclick="FormatJson">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                                    <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
-                                </svg>
-                            </button>
-                        </div>
+                                <div class="col-1">
+                                    <button class="btn btn-danger" style="width: 60px" @onclick="SaveContent">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="col-1">
+                                    <button class="btn btn-primary me-2" style="width: 60px" @onclick="FormatJson">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        }
                     </div>
+
                 </div>
             }
             else
@@ -101,24 +175,29 @@
         font-family: monospace;
         font-size: 14px;
     }
+
     .json-viewer-actions {
         display: flex;
         gap: 10px;
     }
+
     .json-key {
         color: #007bff; /* Blue for keys */
         font-weight: bold;
     }
+
     .json-value {
         color: #28a745; /* Green for values */
     }
+
     .json-string {
         color: #6f42c1; /* Purple for strings */
     }
+
     .json-number {
         color: #e83e8c; /* Pink for numbers */
     }
-   
+
 </style>
 
 <script>

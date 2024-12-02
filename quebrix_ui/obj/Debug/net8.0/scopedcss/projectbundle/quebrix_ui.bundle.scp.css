@@ -461,11 +461,28 @@ body[b-1og44tenzg] {
 
 .sidebar[b-c5fag8dmxp] {
     width: 300px;
-    background-color: #f8f9fa;
+    border-radius: 5px;
+    background-color: #ccc;
     border-right: 1px solid #ddd;
     display: flex;
     flex-direction: column;
     padding: 10px;
+}
+
+
+.key[b-c5fag8dmxp] {
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #f5f5f5;
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; 
+    cursor: pointer; 
+}
+
+.key:hover[b-c5fag8dmxp] {
+    background-color: #1e3e62; 
+    color: #fff; 
+    transform: translateY(-2px); 
 }
 
 .sidebar-header[b-c5fag8dmxp] {
@@ -534,4 +551,7 @@ body[b-1og44tenzg] {
     text-align: center;
     font-size: 16px;
 }
+
+
+
 /* _content/quebrix_ui/Components/Pages/Quebrix.razor.rz.scp.css */

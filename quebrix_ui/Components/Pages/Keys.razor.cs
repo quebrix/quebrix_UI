@@ -1,5 +1,7 @@
 using System.Text.Json;
+using BlazorBootstrap;
 using Microsoft.AspNetCore.Components;
+using quebrix_ui.DTOs;
 using quebrix_ui.Helpers;
 using quebrix_ui.Services;
 
@@ -8,6 +10,10 @@ namespace quebrix_ui.Components.Pages;
 public partial class Keys : ComponentBase
 {
     [Inject] private IStorageManagment _StorageManagment { get; set; }
+    [Inject] private ToastService ToastService { get; set; }
+    private Modal modal = default!;
+    private SetKeyValueDTO KeyValueSetter { get; set; } = new() {ttl = new TimeOnly(10, 0)};
+    private bool Hasttl { get; set; }
     [Parameter] public string ClusterName { get; set; }
     private ApiClient _client { get; set; } = new("http://localhost:6022");
     private List<string> Keyss { get; set; } = new List<string>();
@@ -15,10 +21,30 @@ public partial class Keys : ComponentBase
     private string SelectedKey = string.Empty;
     private string EditableJson = string.Empty;
 
+    private void SwitchHasttlChanged(bool value) => Hasttl = value;
+        
+    
+    private async Task OnShowModalClick()
+    {
+        await modal.ShowAsync();
+    }
+
+    private async Task OnHideModalClick()
+    {
+        await modal.HideAsync();
+    }
+    
     private IEnumerable<string> FilteredKeys =>
         Keyss.Where(key => key.Contains(FilterText, StringComparison.OrdinalIgnoreCase));
 
-   
+    private bool IsLoading { get; set; }
+    private async Task RefreshKeysAsync()
+    {
+        IsLoading = true;
+        var auth = await _StorageManagment.GetAsync<string>("auth");
+        Keyss = await _client.GetKeysOfCluster(ClusterName, auth);
+        IsLoading = false;
+    }
 
     protected async override Task OnInitializedAsync()
     {

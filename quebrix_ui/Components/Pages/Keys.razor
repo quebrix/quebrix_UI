@@ -3,6 +3,7 @@
 @using System.Text.Json
 @using quebrix_ui.Components.Layout
 
+<Toasts class="p-3" Messages="messages" AutoHide="true" Placement="ToastsPlacement.TopRight" />
 @* modal *@
 <Modal @ref="modal" title="Create key value" IsVerticallyCentered="true">
     <BodyTemplate>
@@ -28,19 +29,32 @@
                 <span class="text-danger me-2">*</span>
                 <label class="me-3">TTL</label>
                 <div class="form-group mb-3 d-flex align-items-center">
-                    <Switch Class="mt-3 me-3" Value="Hasttl" ValueExpression="() => Hasttl" ValueChanged="SwitchHasttlChanged" />
-                    <InputText disabled="@(!Hasttl)" @bind-Value="KeyValueSetter.Value" class="form-control" />
+                    <Switch Class="mt-3 me-3" Value="Hasttl" ValueExpression="() => Hasttl"
+                            ValueChanged="SwitchHasttlChanged"/>
+
+                    <select class="form-select me-3" @bind="SelectedUnit" disabled="@(!Hasttl)">
+                        <option value="Seconds">Sec</option>
+                        <option value="Minutes">Min</option>
+                        <option value="Hours">Hour</option>
+                    </select>
+
+                    <input type="number"
+                           min="1"
+                           @bind="TimeTTl"
+                           class="form-control me-3"
+                           placeholder="Enter value"
+                           disabled="@(!Hasttl)"/>
                 </div>
             </div>
-               
+
 
             <hr/>
             <div class="row" style="direction: rtl">
                 <div class="col-2">
-                    <button type="submit" class="btn btn-success rounded-3">Save</button>
+                    <button type="button" class="btn btn-success rounded-3" @onclick="async ()=>await HandleInsertkey()">Save</button>
                 </div>
                 <div class="col-2">
-                    <button type="submit" class="btn btn-danger rounded-3" @onclick="OnHideModalClick">Close</button>
+                    <button type="button" class="btn btn-danger rounded-3" @onclick="OnHideModalClick">Close</button>
                 </div>
             </div>
         </EditForm>
@@ -57,7 +71,7 @@
                 <input type="text" @bind:event="oninput" class="form-control" @bind="FilterText"
                        placeholder="Search keys..."/>
             </div>
-            <div class="d-flex justify-content-start p-3">
+            <div class="d-flex justify-content-start p-2">
                 <Button Loading="@(IsLoading ? true : false)" LoadingText="Refreshing"
                         class="btn btn-outline-secondary me-2" @onclick="async ()=>await RefreshKeysAsync()"
                         data-bs-toggle="tooltip" data-bs-placement="top"
@@ -126,7 +140,7 @@
                                 <div class="col-1">
                                     <button class="btn btn-warning" style="width: 60px" @onclick="SaveContent">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                             fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
                                             <path
                                                 d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z"/>
                                         </svg>
@@ -134,7 +148,7 @@
                                 </div>
 
                                 <div class="col-1">
-                                    <button class="btn btn-danger" style="width: 60px" @onclick="SaveContent">
+                                    <button class="btn btn-danger" style="width: 60px" @onclick="DeleteKey">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                              fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                             <path

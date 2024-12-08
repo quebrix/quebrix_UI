@@ -94,9 +94,13 @@
             </div>
 
             <ul class="list-group custom-scroll">
-                @if (Keyss.Count == 0)
+                @if (Keyss.Count == 0 && !KeysAreZero)
                 {
                     <Spinner Color="SpinnerColor.Info" Size="SpinnerSize.Medium" Type="SpinnerType.Dots"></Spinner>
+                }
+                else if (KeysAreZero)
+                {
+                    <p>No keys</p>
                 }
                 else
                 {

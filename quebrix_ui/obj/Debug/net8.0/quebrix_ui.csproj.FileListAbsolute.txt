@@ -47,3 +47,7 @@ D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\scopedcss\Component
 D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\scopedcss\Components\Pages\Clusters.razor.rz.scp.css
 D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\quebrix_ui.sourcelink.json
 D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\scopedcss\Components\Pages\Keys.razor.rz.scp.css
+D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\bin\Debug\net8.0\quebrix_ui.staticwebassets.endpoints.json
+D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\staticwebassets\msbuild.quebrix_ui.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\quebrix\quebrix_ui\quebrix_ui\quebrix_ui\obj\Debug\net8.0\scopedcss\Components\Pages\Copy.razor.rz.scp.css

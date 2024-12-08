@@ -24,13 +24,20 @@
 }
 .login-form[b-yfap9c4kwr] {
     flex: 1;
+    border:solid #ccc 1px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 5, 5, 5);
+}
+
+.login-border[b-yfap9c4kwr]{
+    border :solid #ccc 1px;
+    box-shadow: 0 4px 8px rgba(0, 5, 5, 5);
+    border-radius: 15px;
 }
 
 .login-form h2[b-yfap9c4kwr] {
@@ -451,6 +458,56 @@ body[b-1og44tenzg] {
     background: linear-gradient(145deg, #2a5486, #1e3e62);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4), -5px -5px 20px rgba(255, 255, 255, 0.5);
     transform: translateY(-3px);
+}
+/* _content/quebrix_ui/Components/Pages/Copy.razor.rz.scp.css */
+.form-container[b-ubw6wshzo6] {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h3[b-ubw6wshzo6] {
+    color: #343a40;
+    font-weight: bold;
+}
+
+.form-group label[b-ubw6wshzo6] {
+    font-weight: 500;
+}
+
+select.form-control[b-ubw6wshzo6] {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+select.form-control:focus[b-ubw6wshzo6] {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.copy-to-text[b-ubw6wshzo6] {
+    font-size: 1.2rem;
+    color: #495057;
+    font-weight: bold;
+}
+
+.submit-btn[b-ubw6wshzo6] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.submit-btn:hover[b-ubw6wshzo6] {
+    background-color: #0056b3;
 }
 /* _content/quebrix_ui/Components/Pages/Keys.razor.rz.scp.css */
 .key-viewer[b-c5fag8dmxp] {

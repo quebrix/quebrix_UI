@@ -1,0 +1,46 @@
+@page "/copy-cluster-keys"
+@using quebrix_ui.Components.Layout
+@layout MainLayout
+
+<Toasts class="p-3" Messages="messages" Placement="ToastsPlacement.TopRight"/>
+
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10">
+        <div class="form-container">
+            <h3 class="text-center mb-4">Copy Cluster Keys</h3>
+            <hr class="mb-4">
+            <EditForm Model="Model">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="sourceCluster">Source Cluster</label>
+                            <select id="sourceCluster" name="sourceCluster" class="form-control" @bind="Model.SRC">
+                                @foreach (var cluster in _clusters)
+                                {
+                                    <option value="@cluster">@cluster</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 d-flex align-items-center justify-content-center">
+                        <p class="copy-to-text">Copy to</p>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="targetCluster">Target Cluster</label>
+                            <select id="targetCluster" name="targetCluster" class="form-control" @bind="Model.DESC">
+                                @foreach (var cluster in _clusters)
+                                {
+                                    <option value="@cluster">@cluster</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <Button Loading="IsLoading" LoadingText="Copying..." @onclick="async () => await CopyClusterAsync()" class="submit-btn">Copy</Button>
+            </EditForm>
+        </div>
+    </div>
+</div>

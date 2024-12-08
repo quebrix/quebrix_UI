@@ -12,6 +12,7 @@ public partial class Keys : ComponentBase
     [Inject] private IStorageManagment _StorageManagment { get; set; }
     [Inject] private ToastService ToastService { get; set; } = default!;
     private long TimeTTl { get; set; }
+    private bool KeysAreZero = false;
     List<ToastMessage> messages = new List<ToastMessage>();
     private Modal modal = default!;
     private string SelectedUnit = "Seconds";
@@ -50,6 +51,11 @@ public partial class Keys : ComponentBase
         IsLoading = true;
         var auth = await _StorageManagment.GetAsync<string>("auth");
         Keyss = await _client.GetKeysOfCluster(ClusterName, auth);
+        if (Keyss.Count == 0)
+            KeysAreZero = true;
+        else
+            KeysAreZero = false;
+                
         IsLoading = false;
         StateHasChanged();
     }
@@ -102,21 +108,25 @@ public partial class Keys : ComponentBase
         }
         else
         {
-            switch (SelectedUnit)
+            if (Hasttl)
             {
-                case "Seconds":
-                    KeyValueSetter.ttl = TimeTTl * 1000;
-                    break;
-                case "Minutes":
-                    KeyValueSetter.ttl = TimeTTl * 60 * 1000;
-                    break;
-                case "Hours":
-                    KeyValueSetter.ttl = TimeTTl * 60 * 60 * 1000;
-                    break;
+                switch (SelectedUnit)
+                {
+                    case "Seconds":
+                        KeyValueSetter.ttl = TimeTTl * 1000;
+                        break;
+                    case "Minutes":
+                        KeyValueSetter.ttl = TimeTTl * 60 * 1000;
+                        break;
+                    case "Hours":
+                        KeyValueSetter.ttl = TimeTTl * 60 * 60 * 1000;
+                        break;
+                }
             }
+           
 
             var insertResponse = await _client.Set(ClusterName, KeyValueSetter.Key, KeyValueSetter.Value, auth,
-                KeyValueSetter.ttl);
+                Hasttl?KeyValueSetter.ttl:null);
             if (insertResponse)
             {
                 ToastService.Notify(new ToastMessage(ToastType.Success, IconName.Check2, "Create key value",

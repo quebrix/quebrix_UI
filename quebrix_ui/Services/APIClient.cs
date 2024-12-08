@@ -213,6 +213,37 @@ public class ApiClient
         }
     }
 
+    
+    public async Task<bool> CopyCluster(string srcCluster, string destCluster,string credentials)
+    {
+        var url = "/api/copy_cluster";
+        var request = new RestRequest(url, Method.Post);
+        var setRequest = new MoveClusterRequest
+        {
+            DestCluster = destCluster,
+            SrcCluster = srcCluster
+        };
+        var jsonBody = JsonConvert.SerializeObject(setRequest);
+        request.AddParameter("application/json", jsonBody, ParameterType.RequestBody);
+        request.AddHeader("Authorization", $"{credentials}");
+        var response = await _client.ExecuteAsync(request);
+        if (response.IsSuccessful)
+        {
+            var result = JsonConvert.DeserializeObject<ApiResponse<string>>(response.Content);
+            if (result.IsSuccess)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
     //helpers
     internal string MakeAuth(string username, string password) => Convert.ToBase64String(Encoding.UTF8.GetBytes($"{username}:{password}"));
 }

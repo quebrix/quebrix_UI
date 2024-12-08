@@ -10,7 +10,7 @@
     },
     {
       "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css",
-      "PackagePath": "staticwebassets\\quebrix_ui.bundle.scp.css"
+      "PackagePath": "staticwebassets\\quebrix_ui.toqe7qj2mo.bundle.scp.css"
     },
     {
       "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\android-chrome-512x512.png",
@@ -51,6 +51,10 @@
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.quebrix_ui.props",
       "PackagePath": "buildTransitive\\quebrix_ui.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.quebrix_ui.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.quebrix_ui.Microsoft.AspNetCore.StaticWebAssets.props",

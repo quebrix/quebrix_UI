@@ -1,0 +1,183 @@
+﻿@page "/shardingConfig"
+@using Newtonsoft.Json
+@using quebrix_ui.Components.Layout
+@using quebrix_ui.DTOs
+@using quebrix_ui.Helpers
+@using quebrix_ui.Services
+@layout MainLayout
+
+
+<Toasts class="p-3" Messages="messages" AutoHide="true" Placement="ToastsPlacement.TopRight" />
+<style>
+	body {
+	/* background-color: #f5f7fa; */
+	}
+
+	.shard-container {
+	background-color: whitesmoke;
+	color: black;
+	border-radius: 12px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	animation: slideIn 0.5s ease;
+	}
+
+	.shard-container:hover {
+	transform: scale(1.01);
+	box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+	}
+
+	@@keyframes slideIn {
+	from {
+	opacity: 0;
+	transform: translateY(20px);
+	}
+
+	to {
+	opacity: 1;
+	transform: translateY(0);
+	}
+	}
+
+	.form-control, .form-label {
+	color: black !important;
+	}
+
+	.btn-action {
+	transition: transform 0.2s ease;
+	}
+
+	.btn-action:hover {
+	transform: scale(1.1);
+	}
+
+	.btn-custom {
+	background-color: #1b2a41;
+	color: white;
+	border: 1px solid white;
+	}
+
+	.btn-custom:hover {
+	background-color: #162031;
+	color: #f5f5f5;
+	}
+</style>
+
+<div class="container py-5">
+
+	<Callout Color="CalloutColor.Warning">
+		<strong>there is no shard config set on this server of quebrix.</strong>
+	</Callout>
+
+	<h2 class="text-center text-black fw-bold mb-4">🧩 Sharding Configuration</h2>
+	<hr />
+	@foreach (var config in Shards)
+	{
+		<div class="shard-container row gx-3 gy-2 align-items-end">
+			<div class="col-md-3">
+				<label class="form-label fw-semibold">From Key</label>
+				<input type="number" class="form-control bg-transparent border-dark" @bind="config.FromKey" />
+			</div>
+			<div class="col-md-3">
+				<label class="form-label fw-semibold">To Key</label>
+				<input type="number" class="form-control bg-transparent border-dark" @bind="config.ToKey" />
+			</div>
+			<div class="col-md-4">
+				<label class="form-label fw-semibold">Connection String</label>
+				<input type="text" class="form-control bg-transparent border-dark" @bind="config.ConnectionString" />
+			</div>
+			<div class="col-md-2 d-flex justify-content-end">
+				<button class="btn btn-outline-danger me-2 btn-action" @onclick="@(() => RemoveShard(config))" title="Remove"></button>
+			</div>
+		</div>
+		<hr />
+	}
+
+	<div class="row col-12">
+
+		<div class="col-12">
+			<div class="text-center mt-4">
+				<button class="btn btn-success shadow-sm btn-action" @onclick="AddShard">➕ Add Shard</button>
+			</div>
+
+		</div>
+
+		<div class="col-1">
+			<div class="text-center mt-4">
+				<button class="btn btn-primary px-5 shadow btn-action" @onclick="async()=>await SaveAll()">💾 Save All Configurations</button>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+	@if (Saved)
+	{
+		<div class="alert alert-success text-center mt-4 animate__animated animate__fadeInDown" role="alert">
+			✅ Configurations Saved Successfully!
+		</div>
+	}
+</div>
+
+@code {
+	[Inject] private IStorageManagment _StorageManagment { get; set; }
+	[Inject] private ToastService ToastService { get; set; } = default!;
+	private ApiClient _client { get; set; } = new("http://localhost:6022");
+	List<ToastMessage> messages = new List<ToastMessage>();
+
+	public class ShardConfig
+	{
+		public int FromKey { get; set; }
+		public int ToKey { get; set; }
+		public string ConnectionString { get; set; } = string.Empty;
+	}
+
+	private List<ShardConfig> Shards { get; set; } = new()
+	{
+		new ShardConfig()
+	};
+
+	private bool Saved = false;
+
+	private void AddShard()
+	{
+		Shards.Add(new ShardConfig());
+	}
+
+	private void RemoveShard(ShardConfig config)
+	{
+		Shards.Remove(config);
+	}
+
+
+	protected override async Task OnInitializedAsync()
+	{
+		var auth = await _StorageManagment.GetAsync<string>("auth");
+		var data = await _client.Get("sharding", "sharding", auth);
+		var fData = JsonConvert.DeserializeObject<List<ShardConfig>>(data);
+		Shards = fData;
+	}
+	private async Task SaveAll()
+	{
+
+		var data = JsonConvert.SerializeObject(Shards);
+		var auth = await _StorageManagment.GetAsync<string>("auth");
+		var insertResponse = await _client.Set("sharding", "sharding", data, auth, null);
+		if (insertResponse)
+		{
+			ToastService.Notify(new ToastMessage(ToastType.Success, IconName.Check2, "Create key value",
+				"succeed"));
+		}
+		else
+		{
+			ToastService.Notify(new ToastMessage(ToastType.Danger, IconName.X, "Create key value",
+				"some thing went wrong check logs"));
+		}
+
+	}
+}

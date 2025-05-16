@@ -245,5 +245,5 @@ public class ApiClient
         }
     }
     //helpers
-    internal string MakeAuth(string username, string password) => Convert.ToBase64String(Encoding.UTF8.GetBytes($"{username}:{password}"));
+    internal string MakeAuth(string username, string password) => $"qbx.{Convert.ToBase64String(Encoding.UTF8.GetBytes($"{username}:{password}"))}";
 }

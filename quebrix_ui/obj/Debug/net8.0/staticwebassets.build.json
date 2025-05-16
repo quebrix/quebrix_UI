@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0DqFSdk/JvGKZ5/iBGBwvNPk6Nv/X/LdCUONpvb7TME=",
+  "Hash": "NRWlRLYxzXMYOy/FjmS2IvUYBhQdrs/e9mI5Tsxk4yY=",
   "Source": "quebrix_ui",
   "BasePath": "_content/quebrix_ui",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "quebrix_ui\\wwwroot",
       "Source": "quebrix_ui",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\",
       "BasePath": "_content/quebrix_ui",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
+      "Identity": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "FYJNevdgdMX4R7rEhQxDvKVdV5SyZSlRT4eVSU+Lgyk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.ai.js",
+      "Identity": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.ai.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.ai.js",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "qqVhOIiDDbSiSP44XiXacBrWpys+pgsREG/S9PlabcQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.ai.js"
+      "OriginalItemSpec": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.ai.js"
     },
     {
-      "Identity": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.css",
+      "Identity": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.css",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.css",
       "AssetKind": "All",
@@ -77,13 +77,13 @@
       "Integrity": "jqE3jyGxWnCTc0Y7oGfHKZOpZM9udgb38MQGLaxmkNc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.css"
+      "OriginalItemSpec": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.js",
+      "Identity": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.js",
       "AssetKind": "All",
@@ -98,13 +98,13 @@
       "Integrity": "ajVMnqBMAkGl+pstlYFA4TwJBU1G7yqG5K5q51SUDJU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.js"
+      "OriginalItemSpec": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.pdf.js",
+      "Identity": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.pdf.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.pdf.js",
       "AssetKind": "All",
@@ -119,13 +119,13 @@
       "Integrity": "oAIj2P0Z/6hTwjGA3OGvWLdxMP4KwE35+AQzWQTpxAg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.pdf.js"
+      "OriginalItemSpec": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.pdf.js"
     },
     {
-      "Identity": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
+      "Identity": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.sortable-list.js",
       "AssetKind": "All",
@@ -140,13 +140,13 @@
       "Integrity": "du71NM6e2+m9l81ldV+Gbr74ER7Xx1GnJFg+rIY6OQU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js"
+      "OriginalItemSpec": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js"
     },
     {
-      "Identity": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
+      "Identity": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.theme-switcher.js",
       "AssetKind": "All",
@@ -161,13 +161,13 @@
       "Integrity": "Hy2y6B5ohWPnmWg4c52+QUuZGTw8r09KtWKcaGiaa/k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.theme-switcher.js"
+      "OriginalItemSpec": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.theme-switcher.js"
     },
     {
-      "Identity": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\icon\\128X128.png",
+      "Identity": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\icon\\128X128.png",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "icon/128X128.png",
       "AssetKind": "All",
@@ -182,13 +182,13 @@
       "Integrity": "J1yB7ftYf6PWiU1781eE0JHBGfd1MV/XlLaxpVy09RU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\icon\\128X128.png"
+      "OriginalItemSpec": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\icon\\128X128.png"
     },
     {
-      "Identity": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.min.js",
+      "Identity": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.min.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "pdfjs-4.0.379.min.js",
       "AssetKind": "All",
@@ -203,13 +203,13 @@
       "Integrity": "XX7we2CiSWzj3rsNtKFCod90LBYAJ3bo8rmu4EuN7SQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.min.js"
+      "OriginalItemSpec": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.min.js"
     },
     {
-      "Identity": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
+      "Identity": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "pdfjs-4.0.379.worker.min.js",
       "AssetKind": "All",
@@ -224,13 +224,13 @@
       "Integrity": "JbwqIn9Fic7JuWyTXuNnAA1T0dYQ2tkTi9HhrSltUtQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js"
+      "OriginalItemSpec": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\Components\\Layout\\LoginLayout.razor.js",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\Components\\Layout\\LoginLayout.razor.js",
       "SourceId": "quebrix_ui",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "Components/Layout/LoginLayout.razor.js",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "Components\\Layout\\LoginLayout.razor.js"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\Components\\Pages\\Quebrix.razor.js",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\Components\\Pages\\Quebrix.razor.js",
       "SourceId": "quebrix_ui",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "Components/Pages/Quebrix.razor.js",
       "AssetKind": "All",
@@ -269,10 +269,10 @@
       "OriginalItemSpec": "Components\\Pages\\Quebrix.razor.js"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\bundle\\quebrix_ui.styles.css",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\bundle\\quebrix_ui.styles.css",
       "SourceId": "quebrix_ui",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "quebrix_ui#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -287,13 +287,13 @@
       "Integrity": "HHJCE8sGVULnrLHwaI/OSMEMl3ojYAachffjx1/tFts=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\bundle\\quebrix_ui.styles.css"
+      "OriginalItemSpec": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\bundle\\quebrix_ui.styles.css"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css",
       "SourceId": "quebrix_ui",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "quebrix_ui#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -308,13 +308,13 @@
       "Integrity": "Y8LsE8bZs7qEQUlip11U/CmEQzQC2qeO6G7KeGWsOIE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css"
+      "OriginalItemSpec": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\app.css",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\app.css",
       "SourceId": "quebrix_ui",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -332,10 +332,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "quebrix_ui",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -353,10 +353,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "quebrix_ui",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\favicon.png",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\favicon.png",
       "SourceId": "quebrix_ui",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -395,10 +395,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\android-chrome-512x512.png",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\android-chrome-512x512.png",
       "SourceId": "quebrix_ui",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "Images/android-chrome-512x512#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\android-chrome-512x512.png"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\favicon.ico",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\favicon.ico",
       "SourceId": "quebrix_ui",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "Images/favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -437,10 +437,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\favicon.ico"
     },
     {
-      "Identity": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\login_img.jpg",
+      "Identity": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\login_img.jpg",
       "SourceId": "quebrix_ui",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\",
+      "ContentRoot": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\",
       "BasePath": "_content/quebrix_ui",
       "RelativePath": "Images/login_img#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -461,7 +461,7 @@
   "Endpoints": [
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.63oqyoiiv4.css",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.css",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -506,7 +506,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -551,7 +551,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.ai.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.ai.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.ai.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -588,7 +588,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.ai.m4v3m943t1.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.ai.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.ai.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -633,7 +633,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -670,7 +670,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.css",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.css",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -707,7 +707,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -744,7 +744,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.mgojsf1q78.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -789,7 +789,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.pdf.ct0ej5e0q0.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.pdf.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.pdf.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -834,7 +834,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.pdf.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.pdf.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.pdf.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -871,7 +871,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.sortable-list.ezlxc6gzv3.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -916,7 +916,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.sortable-list.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -953,7 +953,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.theme-switcher.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -990,7 +990,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.theme-switcher.pisakkcwob.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1035,7 +1035,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/icon/128X128.png",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\icon\\128X128.png",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\icon\\128X128.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1072,7 +1072,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/icon/128X128.tngynhsog2.png",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\icon\\128X128.png",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\icon\\128X128.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1117,7 +1117,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/pdfjs-4.0.379.min.j8zp7bt7w3.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.min.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1162,7 +1162,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/pdfjs-4.0.379.min.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.min.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1199,7 +1199,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/pdfjs-4.0.379.worker.min.79hai7knhw.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1244,7 +1244,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/pdfjs-4.0.379.worker.min.js",
-      "AssetFile": "C:\\Users\\DIAKO\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
+      "AssetFile": "C:\\Users\\No1\\.nuget\\packages\\blazor.bootstrap\\3.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1281,7 +1281,7 @@
     },
     {
       "Route": "app.css",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\app.css",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1302,7 +1302,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 19:27:40 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1318,7 +1318,7 @@
     },
     {
       "Route": "app.nfc268teei.css",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\app.css",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1339,7 +1339,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 19:27:40 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1363,7 +1363,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1384,7 +1384,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 16:21:10 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1408,7 +1408,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1429,7 +1429,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 16:21:10 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1445,7 +1445,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1466,7 +1466,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 16:21:10 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1490,7 +1490,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1511,7 +1511,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 16:21:10 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1527,7 +1527,7 @@
     },
     {
       "Route": "Components/Layout/LoginLayout.razor.js",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\Components\\Layout\\LoginLayout.razor.js",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\Components\\Layout\\LoginLayout.razor.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1552,7 +1552,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 16:25:55 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         }
       ],
       "EndpointProperties": [
@@ -1568,7 +1568,7 @@
     },
     {
       "Route": "Components/Pages/Quebrix.razor.js",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\Components\\Pages\\Quebrix.razor.js",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\Components\\Pages\\Quebrix.razor.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1593,7 +1593,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 15:33:10 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         }
       ],
       "EndpointProperties": [
@@ -1609,7 +1609,7 @@
     },
     {
       "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\favicon.png",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1630,7 +1630,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 16:21:08 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1654,7 +1654,7 @@
     },
     {
       "Route": "favicon.png",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\favicon.png",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1675,7 +1675,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 16:21:08 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1691,7 +1691,7 @@
     },
     {
       "Route": "Images/android-chrome-512x512.png",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\android-chrome-512x512.png",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\android-chrome-512x512.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1712,7 +1712,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 17:27:59 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1728,7 +1728,7 @@
     },
     {
       "Route": "Images/android-chrome-512x512.xk3iey7u88.png",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\android-chrome-512x512.png",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\android-chrome-512x512.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1749,7 +1749,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 17:27:59 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1773,7 +1773,7 @@
     },
     {
       "Route": "Images/favicon.i98417di4m.ico",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\favicon.ico",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1794,7 +1794,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 18:29:43 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1818,7 +1818,7 @@
     },
     {
       "Route": "Images/favicon.ico",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\favicon.ico",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1839,7 +1839,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 18:29:43 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1855,7 +1855,7 @@
     },
     {
       "Route": "Images/login_img.jpg",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\login_img.jpg",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\login_img.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1876,7 +1876,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 18:47:17 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1892,7 +1892,7 @@
     },
     {
       "Route": "Images/login_img.wg8nopz9l9.jpg",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\login_img.jpg",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\login_img.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1913,7 +1913,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 18:47:17 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1937,7 +1937,7 @@
     },
     {
       "Route": "quebrix_ui.bundle.scp.css",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1958,7 +1958,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:40:20 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1974,7 +1974,7 @@
     },
     {
       "Route": "quebrix_ui.styles.css",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\bundle\\quebrix_ui.styles.css",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\bundle\\quebrix_ui.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1999,7 +1999,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:40:20 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Link",
@@ -2015,7 +2015,7 @@
     },
     {
       "Route": "quebrix_ui.toqe7qj2mo.bundle.scp.css",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2036,7 +2036,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:40:20 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2060,7 +2060,7 @@
     },
     {
       "Route": "quebrix_ui.wdjbrb9fjf.styles.css",
-      "AssetFile": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\bundle\\quebrix_ui.styles.css",
+      "AssetFile": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\bundle\\quebrix_ui.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2085,7 +2085,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:40:20 GMT"
+          "Value": "Tue, 13 May 2025 17:09:59 GMT"
         },
         {
           "Name": "Link",

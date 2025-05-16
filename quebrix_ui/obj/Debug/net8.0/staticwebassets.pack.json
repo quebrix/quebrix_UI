@@ -1,43 +1,43 @@
 {
   "Files": [
     {
-      "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\Components\\Layout\\LoginLayout.razor.js",
+      "Id": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\Components\\Layout\\LoginLayout.razor.js",
       "PackagePath": "staticwebassets\\Components\\Layout\\LoginLayout.razor.js"
     },
     {
-      "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\Components\\Pages\\Quebrix.razor.js",
+      "Id": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\Components\\Pages\\Quebrix.razor.js",
       "PackagePath": "staticwebassets\\Components\\Pages\\Quebrix.razor.js"
     },
     {
-      "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css",
+      "Id": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\quebrix_ui.bundle.scp.css",
       "PackagePath": "staticwebassets\\quebrix_ui.toqe7qj2mo.bundle.scp.css"
     },
     {
-      "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\android-chrome-512x512.png",
+      "Id": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\android-chrome-512x512.png",
       "PackagePath": "staticwebassets\\Images\\android-chrome-512x512.png"
     },
     {
-      "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\favicon.ico",
+      "Id": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\favicon.ico",
       "PackagePath": "staticwebassets\\Images\\favicon.ico"
     },
     {
-      "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\Images\\login_img.jpg",
+      "Id": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\Images\\login_img.jpg",
       "PackagePath": "staticwebassets\\Images\\login_img.jpg"
     },
     {
-      "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\app.css",
+      "Id": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\quebrix\\quebrix_ui\\quebrix_ui\\quebrix_ui\\wwwroot\\favicon.png",
+      "Id": "D:\\OpenSource\\QeubrixApp\\quebrix_UI\\quebrix_ui\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {

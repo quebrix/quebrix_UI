@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("quebrix_ui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+178502d3b95c0627ecf929cdc71efc1e7d109e96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e635ee8211f8e2669ddf0f1bc8a7c5804ccc296d")]
 [assembly: System.Reflection.AssemblyProductAttribute("quebrix_ui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("quebrix_ui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

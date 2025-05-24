@@ -71,50 +71,58 @@
 		<strong>there is no shard config set on this server of quebrix.</strong>
 	</Callout>
 
-	<h2 class="text-center text-black fw-bold mb-4">🧩 Sharding Configuration</h2>
-	<hr />
-	@foreach (var config in Shards)
+	@if(Shards.Count == 0)
 	{
-		<div class="shard-container row gx-3 gy-2 align-items-end">
-			<div class="col-md-3">
-				<label class="form-label fw-semibold">From Key</label>
-				<input type="number" class="form-control bg-transparent border-dark" @bind="config.FromKey" />
-			</div>
-			<div class="col-md-3">
-				<label class="form-label fw-semibold">To Key</label>
-				<input type="number" class="form-control bg-transparent border-dark" @bind="config.ToKey" />
-			</div>
-			<div class="col-md-4">
-				<label class="form-label fw-semibold">Connection String</label>
-				<input type="text" class="form-control bg-transparent border-dark" @bind="config.ConnectionString" />
-			</div>
-			<div class="col-md-2 d-flex justify-content-end">
-				<button class="btn btn-outline-danger me-2 btn-action" @onclick="@(() => RemoveShard(config))" title="Remove"></button>
-			</div>
-		</div>
-		<hr />
+		<Spinner Color="SpinnerColor.Secondary" Size="SpinnerSize.Large" Class="col col-12" ></Spinner>
 	}
+	else
+	{
+		<h2 class="text-center text-black fw-bold mb-4">🧩 Sharding Configuration</h2>
+		<hr />
+		@foreach (var config in Shards)
+		{
+			<div class="shard-container row gx-3 gy-2 align-items-end">
+				<div class="col-md-3">
+					<label class="form-label fw-semibold">From Key</label>
+					<input type="number" class="form-control bg-transparent border-dark" @bind="config.FromKey" />
+				</div>
+				<div class="col-md-3">
+					<label class="form-label fw-semibold">To Key</label>
+					<input type="number" class="form-control bg-transparent border-dark" @bind="config.ToKey" />
+				</div>
+				<div class="col-md-4">
+					<label class="form-label fw-semibold">Connection String</label>
+					<input type="text" class="form-control bg-transparent border-dark" @bind="config.ConnectionString" />
+				</div>
+				<div class="col-md-2 d-flex justify-content-end">
+					<button class="btn btn-outline-danger  btn-action" @onclick="@(() => RemoveShard(config))" title="Remove"> Remove</button>
+				</div>
+			</div>
+			<hr />
+		}
 
-	<div class="row col-12">
+		<div class="row col-12">
 
-		<div class="col-12">
-			<div class="text-center mt-4">
-				<button class="btn btn-success shadow-sm btn-action" @onclick="AddShard">➕ Add Shard</button>
+			<div class="col-12">
+				<div class="text-center mt-4">
+					<button class="btn btn-success shadow-sm btn-action" @onclick="AddShard">➕ Add Shard</button>
+				</div>
+
+			</div>
+
+			<div class="col-1">
+				<div class="text-center mt-4">
+					<button class="btn btn-primary px-5 shadow btn-action" @onclick="async()=>await SaveAll()">💾 Save All Configurations</button>
+				</div>
 			</div>
 
 		</div>
 
-		<div class="col-1">
-			<div class="text-center mt-4">
-				<button class="btn btn-primary px-5 shadow btn-action" @onclick="async()=>await SaveAll()">💾 Save All Configurations</button>
-			</div>
-		</div>
-
-	</div>
 
 
 
 
+	}
 
 	@if (Saved)
 	{
@@ -159,8 +167,10 @@
 	{
 		var auth = await _StorageManagment.GetAsync<string>("auth");
 		var data = await _client.Get("sharding", "sharding", auth);
-		var fData = JsonConvert.DeserializeObject<List<ShardConfig>>(data);
-		Shards = fData;
+		List<ShardConfig> fdata = new() { new ShardConfig()};
+		if (data is not null)
+			 fdata = JsonConvert.DeserializeObject<List<ShardConfig>>(data);
+		Shards = fdata;
 	}
 	private async Task SaveAll()
 	{
